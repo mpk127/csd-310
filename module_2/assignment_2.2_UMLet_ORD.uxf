@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>280</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>CUSTOMER
+--
+_id:0127
+first_name:Michael
+last_name:Parkhurst
+date_of_birth:1980-07-02
+user_name:mparkhurst127</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>90</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>INVOICE
+--
+_id:1234567
+date_created:2022-06-01
+date_shipped:2022-06-03
+subtotal:66.90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>280</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>INVOICE
+--
+_id:2345678
+date_created:2022-06-02
+date_shipped:2022-06-03
+subtotal:1000.00
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>460</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>INVOICE
+--
+_id:3456789
+date_created:2022-06-03
+date_shipped:2022-06-03
+subtotal:20.83
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>140</y>
+      <w>110</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;190.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>330</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>350</y>
+      <w>110</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>140</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>330</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>470</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>170</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>20</y>
+      <w>170</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>530</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>10</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LINE ITEM
+--
+_id:WPA123456
+name:Whosit
+price:9.99
+quantity:1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>230</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LINE ITEM
+--
+_id:B09RGGFSKZ
+name:horn_oil
+price:8.99
+quantity:1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>340</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LINE ITEM
+--
+_id:121g
+name:flux_capacitor
+price:1000.00
+quantity:1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>120</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LINE ITEM
+--
+_id:ID10T
+name:blinker_fluid
+price:11.98
+quantity:4
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>560</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LINE ITEM
+--
+_id:B08FPJ6H35
+name:whoppee_cushion_3_pack
+price:7.99
+quantity:1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>450</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LINE ITEM
+--
+_id:B001MKEMBK
+name:trick_exhaust_whistle
+price:4.28
+quantity:3
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

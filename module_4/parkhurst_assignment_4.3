@@ -1,0 +1,110 @@
+NoSQL Data Structure:
+(Embedded Document Pattern) 
+// student
+{
+student_id: "21222042",
+first_name: "Michael",
+last_name: “Parkhurst”,
+}
+
+// enrollment
+{
+student_id: "21222042", // reference to student
+term: "spring_22"
+gpa: {"value" NumberDecimal(“3.75”)},
+start_date: ISODate("2022-03-14"),
+end_date: ISODate("2022-06-04"),
+}
+{
+student_id: "21222042", // reference to student
+term: "summer_22"
+gpa: "4.0"
+start_date: ISODate("2022-05-23"),
+end_date: ISODate("2022-10-09"),
+}
+
+// course
+{
+student_id: "21222042:, // reference to student
+term: "spring_22", // reference to enrollment
+course_id: "cybr_340",
+description: "Operating_systems_and_mobile_dev",
+instructor: "Byron Richard",
+grade: "B+",
+}
+{
+student_id: "21222042:, // reference to student
+term_id: "spring_22", // reference to enrollment
+course_id: "cybr_350",
+description: "Web_commerce_and_application_security",
+instructor: "Arlicia Johnson",
+grade: "B-",
+}
+{
+student_id: "21222042:, // reference to student
+term_id: "summer_22", // reference to enrollment
+course_id: "cybr_410",
+description: "Data/Database Security",
+instructor: "Henry Le",
+grade: "A",
+}
+{
+student_id: "21222042:, // reference to student
+term_id: "summer_22", // reference to enrollment
+course_id: "cybr_420",
+description: "Cyber Investigations & Forensics",
+instructor: "Gary Amerson",
+grade: "A",
+}
+
+
+NoSQL Data Structure
+(Subset Pattern)
+// student-enrollment-course
+{
+user_id: "21222042",
+first_name: "Michael",
+last_name: “Parkhurst”,
+"enrollment":[
+{
+term: "spring_22"
+gpa: {"value" NumberDecimal(“3.75”)},
+start_date: ISODate("2022-03-14"),
+end_date: ISODate("2022-06-04"),
+}
+{
+student_id: "21222042", // reference to student
+term: "summer_22"
+gpa: "4.0"
+start_date: ISODate("2022-05-23"),
+end_date: ISODate("2022-10-09"),
+}
+]
+"course":[
+{
+course_id: "cybr_340",
+description: "Operating_systems_and_mobile_dev",
+instructor: "Byron Richard",
+grade: "B+",
+}
+{
+course_id: "cybr_350",
+description: "Web_commerce_and_application_security",
+instructor: "Arlicia Johnson",
+grade: "B-",
+}
+{
+course_id: "cybr_410",
+description: "Data/Database Security",
+instructor: "Henry Le",
+grade: "A",
+}
+{
+course_id: "cybr_420",
+description: "Cyber Investigations & Forensics",
+instructor: "Gary Amerson",
+grade: "A",
+}
+]
+}
+

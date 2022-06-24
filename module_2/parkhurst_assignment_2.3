@@ -1,0 +1,108 @@
+NoSQL Data Structure:
+(Embedded Document Pattern) 
+// student
+{
+student_id: "21222042",
+first_name: "Michael",
+last_name: “Parkhurst”,
+}
+
+// enrollment
+{
+student_id: "21222042", // reference to student
+term: "spring_22"
+gpa: {"value" NumberDecimal(“3.75”)},
+start_date: ISODate("2022-03-14"),
+end_date: ISODate("2022-06-04"),
+}
+{
+student_id: "21222042", // reference to student
+term: "winter_21"
+gpa: {"value" NumberDecimal(“4.00”)},
+start_date: ISODate("2021-11-29"),
+end_date: ISODate("2022-03-05"),
+}
+
+// course
+{
+student_id: "21222042:, // reference to student
+term_id: "spring_22", // reference to enrollment
+course_id: "cybr_340",
+description: "Operating_systems_and_mobile_dev",
+instructor: "Byron Richard",
+grade: "B+",
+}
+{
+student_id: "21222042:, // reference to student
+term_id: "spring_22", // reference to enrollment
+course_id: "cybr_350",
+description: "Web_commerce_and_application_security",
+instructor: "Arlicia Johnson",
+grade: "B-",
+}
+{
+student_id: "21222042:, // reference to student
+term_id: "winter_21", // reference to enrollment
+course_id: "cybr_320",
+description: "Operational_security",
+instructor: "Byron Richard",
+grade: "A",
+}
+{
+student_id: "21222042:, // reference to student
+term_id: "winter_21", // reference to enrollment
+course_id: "cis_411",
+description: "Assesments_and_audits",
+instructor: "Rajesh Kuthrapali",
+grade: "A",
+}
+
+NoSQL Data Structure
+(Subset Pattern)
+//student-enrollment-course
+{
+student_id: "21222042",
+first_name: "Michael",
+last_name: “Parkhurst”,
+"enrollment":[
+{
+term: "spring_22"
+gpa: {"value" NumberDecimal(“3.75”)},
+start_date: ISODate("2022-03-14"),
+end_date: ISODate("2022-06-04"),
+}
+{
+term: "winter_21"
+gpa: {"value" NumberDecimal(“4.00”)},
+start_date: ISODate("2021-11-29"),
+end_date: ISODate("2022-03-05"),
+}
+]
+"course":[
+{
+course_id: "cybr_340",
+description: "Operating_systems_and_mobile_dev",
+instructor: "Byron Richard",
+grade: "B+",
+}
+{
+course_id: "cybr_350",
+description: "Web_commerce_and_application_security",
+instructor: "Arlicia Johnson",
+grade: "B-",
+}
+{
+course_id: "cybr_320",
+description: "Operational_security",
+instructor: "Byron Richard",
+grade: "A",
+}
+{
+course_id: "cis_411",
+description: "Assesments_and_audits",
+instructor: "Rajesh Kuthrapali",
+grade: "A",
+}
+]
+}
+

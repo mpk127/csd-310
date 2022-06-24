@@ -1,0 +1,145 @@
+NoSQL Data Structure:
+(Embedded Document Pattern) 
+// customer
+{
+_id: "0127",
+first_name: "Michael",
+last_name: “Parkhurst”,
+date_of_birth: ISODate(“1980-07-02”),
+user_name: “mparkhurst127",
+}
+
+// invoice
+{
+_id: “1234567”,
+customer_id: "0127", // reference to customer
+date_created: ISODate("2022-06-01"),
+date_shipped: ISODate("2022-06-03"),
+subtotal: {"value" NumberDecimal(“66.90”), “currency”: “USD” },
+}
+{
+_id: “2345678”,
+customer_id: "0127", // reference to customer
+date_created: ISODate("2022-06-02"),
+date_shipped: ISODate("2022-06-03"),
+subtotal: {"value" NumberDecimal(“1000.00”), “currency”: “USD” },
+}
+{
+_id: “3456789”,
+customer_id: "0127", // reference to customer
+date_created: ISODate("2022-06-03"),
+date_shipped: ISODate("2022-06-03"),
+subtotal: {"value" NumberDecimal(“20.83”), “currency”: “USD” },
+}
+
+// line_item
+{
+_id: “WPA123456”,
+invoice_id: "1234567", // reference to invoice
+name: "Whosit",
+price:{"value" NumberDecimal(“9.99”), “currency”: “USD” },
+quantity: "1",
+}
+{
+_id: “ID10T”,
+invoice_id: "1234567", // reference to invoice
+name: "blinker_fluid",
+price:{"value" NumberDecimal(“11.98”), “currency”: “USD” },
+quantity: "4",
+}
+{
+_id: “B09RGGFSKZ”,
+invoice_id: "1234567", // reference to invoice
+name: "horn_oil",
+price:{"value" NumberDecimal(“8.99”), “currency”: “USD” },
+quantity: "1",
+}
+{
+_id: “121g””,
+invoice_id: "2345678", // reference to invoice
+name: "flux_capacitor",
+price:{"value" NumberDecimal(“1000.00”), “currency”: “USD” },
+quantity: "1",
+}
+{
+_id: “B001MKEMBK””,
+invoice_id: "3456789", // reference to invoice
+name: "trick_exhaust_whistle",
+price:{"value" NumberDecimal(“4.28”), “currency”: “USD” },
+quantity: "3",
+}
+{
+_id: “B08FPJ6H35””,
+invoice_id: "3456789", // reference to invoice
+name: "whoppee_cushion_3_pack",
+price:{"value" NumberDecimal(“7.99”), “currency”: “USD” },
+quantity: "1",
+}
+
+NoSQL Data Structure
+//customer-invoice-line_item (Subset Pattern)
+{
+_id: "0127",
+first_name: "Michael",
+last_name: “Parkhurst”,
+date_of_birth: ISODate(“1980-07-02”),,
+user_name: “mparkhurst127",
+"invoice":[
+{
+_id: “1234567”,
+date_created: ISODate("2022-06-01"),
+date_shipped: ISODate("2022-06-03"),
+subtotal: {"value" NumberDecimal(“66.90”), “currency”: “USD” },
+}
+{
+_id: “2345678”,
+date_created: ISODate("2022-06-02"),
+date_shipped: ISODate("2022-06-03"),
+subtotal: {"value" NumberDecimal(“1000.00”), “currency”: “USD” },
+}
+{
+_id: “3456789”,
+date_created: ISODate("2022-06-03"),
+date_shipped: ISODate("2022-06-03"),
+subtotal: {"value" NumberDecimal(“20.83”), “currency”: “USD” },
+}
+]
+"line_item":[
+{
+_id: “WPA123456”,
+name: "Whosit",
+price:{"value" NumberDecimal(“9.99”), “currency”: “USD” },
+quantity: "1",
+}
+{
+_id: “ID10T”,
+name: "blinker_fluid",
+price:{"value" NumberDecimal(“11.98”), “currency”: “USD” },
+quantity: "4",
+}
+{
+_id: “B09RGGFSKZ”,
+name: "horn_oil",
+price:{"value" NumberDecimal(“8.99”), “currency”: “USD” },
+quantity: "1",
+}
+{
+_id: “121g””,
+name: "flux_capacitor",
+price:{"value" NumberDecimal(“1000.00”), “currency”: “USD” },
+quantity: "1",
+}
+{
+_id: “B001MKEMBK””,
+name: "trick_exhaust_whistle",
+price:{"value" NumberDecimal(“4.28”), “currency”: “USD” },
+quantity: "3",
+}
+{
+_id: “B08FPJ6H35””,
+name: "whoppee_cushion_3_pack",
+price:{"value" NumberDecimal(“7.99”), “currency”: “USD” },
+quantity: "1",
+}
+]
+}

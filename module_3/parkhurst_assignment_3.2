@@ -1,0 +1,79 @@
+NoSQL Data Structure:
+(Embedded Document Pattern) 
+// user
+{
+user_id: "21222042",
+first_name: "Michael",
+last_name: “Parkhurst”,
+role: "student",
+permission: "undergraduate",
+}
+
+// link_user_role
+{
+role: "student", // reference to user
+term: "summer_22"
+start_date: ISODate("2022-05-23"),
+end_date: ISODate("2022-10-09"),
+}
+{
+role: "student", // reference to user
+term: "winter_22"
+start_date: ISODate("2022-10-17"),
+end_date: ISODate("2023-03-25"),
+}
+
+// link_role_permission
+{
+permission: "undergraduate", // reference to user
+course: "cybr_410",
+description: "Data/Database Security",
+professor: "Henry Le",
+}
+{
+permission: "undergraduate", // reference to user
+course: "cybr_420",
+description: "Cyber Investigations and Forensics",
+professor: "Gary Amerson",
+}
+
+
+NoSQL Data Structure
+(Subset Pattern)
+//user-link_user_role-link_role_permission
+{
+user_id: "21222042",
+first_name: "Michael",
+last_name: “Parkhurst”,
+role: "student",
+permission: "undergraduate",
+"link_user_role":[
+{
+role: "student",
+term: "summer_22"
+start_date: ISODate("2022-05-23"),
+end_date: ISODate("2022-10-09"),
+}
+{
+role: "student",
+term: "winter_22"
+start_date: ISODate("2022-10-17"),
+end_date: ISODate("2023-03-25"),
+}
+]
+"link_role_permission":[
+{
+permission: "undergraduate",
+course: "cybr_410",
+description: "Data/Database Security",
+professor: "Henry Le",
+}
+{
+permission: "undergraduate",
+course: "cybr_420",
+description: "Cyber Investigations and Forensics",
+professor: "Gary Amerson",
+}
+]
+}
+
