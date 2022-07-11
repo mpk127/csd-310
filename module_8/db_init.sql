@@ -1,12 +1,14 @@
- CREATE USER 'pysports_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'P00p$@ndw1ch';
+DROP USER IF EXISTS 'pysports_user'@'localhost';
 
+CREATE USER 'pysports_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'P00p$@ndw1ch';
+ 
 GRANT ALL PRIVILEGES ON pysports.* TO'pysports_user'@'localhost';
+
 
 DROP TABLE IF EXISTS player;
 DROP TABLE IF EXISTS team;
- 
-DROP USER IF EXISTS 'pysports_user'@'localhost';
- 
+
+
 CREATE TABLE team (
     team_id     INT             NOT NULL        AUTO_INCREMENT,
     team_name   VARCHAR(75)     NOT NULL,

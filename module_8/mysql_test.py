@@ -1,5 +1,5 @@
 import mysql.connector
-from mysql.connectot import errorcode
+from mysql.connector import errorcode
 
 config = {
     "user": "pysports_user",
@@ -28,3 +28,4 @@ except mysql.connector.Error as err:
 
 finally:
     db.close()
+    
