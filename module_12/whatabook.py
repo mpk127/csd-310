@@ -81,7 +81,6 @@ def show_books_to_add(_cursor, _user_id):
     query = ("SELECT book_id, book_name, author, details "
             "FROM book "
             "WHERE book_id NOT IN (SELECT book_id FROM wishlist WHERE user_id = {})".format(_user_id))
-    print(query)
 
     _cursor.execute(query)
 
@@ -140,7 +139,7 @@ try:
                     show_wishlist(cursor, my_user_id)
 
                 if account_option == 2:
-                    show_books_to_remove(cursor, my_user_id)
+                    show_books_to_add(cursor, my_user_id)
                     book_id = int(input("\n        Enter the id of the book you want to add: "))
                     add_book_to_wishlist(cursor, my_user_id, book_id)
                     db.commit()
